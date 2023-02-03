@@ -1,7 +1,7 @@
 import React from 'react';
 import VideoItem from './VideoItem';
 import './VideoList.css';
-const VideoList = ({videoItems,selectVideoItem}) => {
+const VideoList = ({videoItems,selectVideoItem,display}) => {
     /* 
        if( typeof videoItem.id === 'string'){
                     id= videoItem.id
@@ -19,6 +19,7 @@ const VideoList = ({videoItems,selectVideoItem}) => {
                     videoItem={videoItem} 
                     key={VideoItem.id} 
                     selectVideoItem={selectVideoItem}
+                    display={display}
                  /> 
                ))
 

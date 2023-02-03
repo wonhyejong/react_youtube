@@ -1,6 +1,8 @@
 .videoItem{
-    width: 20%;
+    width: calc(20% - 8px);
     padding: 0.4em;
+    border:1px solid #ddd;
+    margin: 4px;
 }
 
 .videoItem.list-v{
@@ -9,16 +11,23 @@
 .videoItem.list-h{
     flex:1 1 50%;
 }
+.videoItem.list-h .Item{
+    display: flex;
+    align-items: center;
+}
 
 .videoItem.list-h .thumnail{
-    width: 30%;
+    flex:1 1 30%;
 }
-.thumnail img{width: 100%;}
+.thumnail img{
+    width: 100%;
+}
 
 .metaDate{
     display: flex;
     text-align:left;
     padding: 1em;
+    flex:1 1 70%;
 }
 
 .metaDate .channelImg{

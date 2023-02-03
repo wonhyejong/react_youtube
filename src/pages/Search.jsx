@@ -13,6 +13,7 @@ const Search = ({videoItems,selectVideoItem}) =>{
              <VideoList 
              videoItems={videoItems}
              selectVideoItem={selectVideoItem}
+             display="list-h"
               />
             </div>
         </div>
