@@ -47,6 +47,10 @@ function App() {
     setSelectVideo(video)
     selectedWatch=video;
     console.log(video)
+    window.scrollTo({
+      top:0,
+      behavior:'smooth'
+    })
   }
 
   return (

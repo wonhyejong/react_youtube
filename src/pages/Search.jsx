@@ -6,7 +6,7 @@ const Search = ({videoItems,selectVideoItem}) =>{
  
     return (
        <div className='contents-wrap'>
-            <div>
+            <div className='sidebar'>
                 <Sidebar />
             </div>
             <div className='list'>

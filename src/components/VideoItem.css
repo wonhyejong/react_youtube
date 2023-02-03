@@ -1,10 +1,12 @@
 .videoItem{
     width: calc(20% - 8px);
     padding: 0.4em;
-    border:1px solid #ddd;
+    border:1px solid #333;
     margin: 4px;
 }
-
+.videoItem:hover{
+    border:1px solid #999
+}
 .videoItem.list-v{
     flex:1 1 20%
 }
@@ -26,7 +28,7 @@
 .metaDate{
     display: flex;
     text-align:left;
-    padding: 1em;
+    padding: 0.25rem;
     flex:1 1 70%;
 }
 
@@ -36,6 +38,8 @@
     height:36px;
     border-radius: 50%;
     overflow: hidden;
+    margin-right: 6px;
+    margin-top: 6px;
 }
 .title, .channel {font-size: 0.925rem;}
 .title{
@@ -49,11 +53,13 @@
 .channel {
     font-size: 0.7rem;
     color:#c0c0c0;
+    margin: 8px 0;
   }
   
 .metaDate .channelImg img {
-    width: 36px;height: 36px;
-     overflow: hidden;
+    width:45px;height:45px;
+    overflow: hidden;
+    margin-top: -6px;
 }
 
 @media screen and (max-width:960px) {
