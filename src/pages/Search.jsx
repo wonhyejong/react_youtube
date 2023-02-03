@@ -2,15 +2,18 @@ import React from 'react';
 import Sidebar from './../components/Sidebar';
 import VideoList from '../components/VideoList';
 
-const Search = () =>{
+const Search = ({videoItems,selectVideoItem}) =>{
  
     return (
-        <div className='contents-wrap'>
+       <div className='contents-wrap'>
             <div>
                 <Sidebar />
             </div>
             <div className='list'>
-                <VideoList />
+             <VideoList 
+             videoItems={videoItems}
+             selectVideoItem={selectVideoItem}
+              />
             </div>
         </div>
     )

@@ -26,7 +26,8 @@ function App() {
     const url = searchUrl(keyword)
     const response = await fetch(url);
     const result = await response.json();
-    setVideoItems(result);
+    const resultCng= result.items.map(item=>({...item,id:item.id.videoId}))
+    setVideoItems(resultCng);
   }
 
   useEffect(()=>{
@@ -42,14 +43,20 @@ function App() {
     setVideoItems(defaultVideos);
   }
 
+  const selectVideoItem = (video) => {
+    setSelectVideo(video)
+    selectedWatch=video;
+    console.log(video)
+  }
+
   return (
-    <div className="App">
+   <div className="App">
       <BrowserRouter>
         <Header search={search} clickLogo={clickLogo} />
         <Routes>
-          <Route path="/" element={<Home videoItems={videoItems} search={search} />} />
-          <Route path="/search" element={<Search videoItems={videoItems} search={search} />} />
-          <Route path="/watch" element={<Watch videoItems={videoItems} search={search} /> } />
+          <Route path="/" element={<Home videoItems={videoItems} search={search} selectVideoItem={selectVideoItem} selectVideo={selectVideo} />} />
+          <Route path="/search" element={<Search videoItems={videoItems} search={search} selectVideoItem={selectVideoItem} selectVideo={selectVideo}  />} />
+          <Route path="/watch" element={<Watch videoItems={videoItems} search={search} selectVideoItem={selectVideoItem} selectVideo={selectVideo} selectedWatch ={selectedWatch} /> } />
         </Routes>
       </BrowserRouter>
     </div>

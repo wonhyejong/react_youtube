@@ -1,14 +1,17 @@
 import React from 'react';
 import VideoList from '../components/VideoList';
 import VideoWatch from '../components/VideoWatch';
-const Watch = () =>{
+const Watch = ({selectVideoItem,videoItems,selectedWatch}) =>{
     return (
         <div className='watch-content'>
             <div className='view'>
-                <VideoWatch />
+                <VideoWatch selectedWatch={selectedWatch} />
            </div> 
             <div className='list'>
-                <VideoList />
+                <VideoList 
+                videoItems={videoItems}
+                selectVideoItem={selectVideoItem} 
+                />
             </div> 
         </div>
     )

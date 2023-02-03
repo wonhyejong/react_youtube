@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { useRef } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link } from 'react-router-dom';
 
 const Header = ({search,clickLogo}) => {
     const inputRef=useRef();
@@ -25,7 +25,7 @@ const Header = ({search,clickLogo}) => {
     return (
         <div className='header'>
             <div className='logoArea'>
-                <h1>YOUTUBE</h1>
+                <h1><Link to="/" onClick={clickLogo}> YOUTUBE</Link></h1>
             </div>
             <div className='searchInputArea'>
                 <input
